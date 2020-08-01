@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date and Time</title>
+	<style type="text/css">
+		#date {
+			width: 50%;
+			height: 50px;
+			margin-top: 20px;
+			background: red;
+			text-align: center;
+			padding: 10px;
+			font-size: 26px;
+			float: left;
+		}
+		#time {
+			width: 45%;
+			height: 50px;
+			margin-top: 20px;
+			background: brown;
+			text-align: center;
+			padding: 10px;
+			font-size: 26px;
+			float: left;
+		}
+	</style>
+</head>
+<body onload="startTime()">
+
+	<div id="date"></div>
+	<div id="time"></div>
+
+<script type="text/javascript">
+	function startTime() {
+		var today = new Date();
+		var h = today.getHours(today);
+		var m = today.getMinutes(today);
+		var s = today.getSeconds(today);
+		var y = today.getFullYear(today);
+		var mth = today.getMonth(today);
+		var d = today.getDate(today);
+		var day = today.getDay();
+		var status;
+	//alert(h);
+		switch(day) {
+			case 0:
+    			day = "Sunday";
+    			break;
+			  case 1:
+			    day = "Monday";
+			    break;
+			  case 2:
+			     day = "Tuesday";
+			    break;
+			  case 3:
+			    day = "Wednesday";
+			    break;
+			  case 4:
+			    day = "Thursday";
+			    break;
+			  case 5:
+			    day = "Friday";
+			    break;
+			  case 6:
+			    day = "Saturday";
+		}
+
+		if (h>=12) {
+			status = 'PM';
+			h = h-12;
+		} else {
+			status = 'AM';
+		}
+		if (m < 10){
+			m = '0' + m;
+		}
+		if (s < 10){
+			s = '0' + s;
+		}
+		if (h < 10){
+			h = '0' + h;
+		}
+		if (mth < 10){
+			mth = '0' + mth;
+		}
+		if (d < 10){
+			d = '0' + d;
+		}
+		var time = h + ':' + m + ':' + s + ' ' + status;
+		var date = y+'-'+mth+'-'+d+', '+day;
+		// document.write(time);
+		// document.write(date);
+		document.getElementById('date').innerHTML = date;
+		document.getElementById('time').innerHTML = time;
+		t = setTimeout('startTime()', 500);
+	}
+		
+//alert(time);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Slider</title>
+	<style type="text/css">
+		.mySlide {
+			display: none;
+		}
+		.wrapper {
+			margin: 80px auto;
+			padding: 50px;
+			width: 500px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="wrapper">
+		<h2>Image Slider</h2>
+		<div class="mySlide">
+			<img src="images/index1.jfif" width="400px" height="300px">
+		</div>
+
+		<div class="mySlide">
+			<img src="images/index2.jfif" width="400px" height="300px">
+		</div>
+
+		<div class="mySlide">
+			<img src="images/index3.jfif" width="400px" height="300px">
+		</div>
+		<div class="mySlide">
+			<img src="images/index4.jfif" width="400px" height="300px">
+		</div>
+		<div class="mySlide">
+			<img src="images/index5.jfif" width="400px" height="300px">
+		</div>
+		<div class="mySlide">
+			<img src="images/index6.jfif" width="400px" height="300px">
+		</div>
+		<button onclick="plusSlides(-1)">Previous</button>
+		&nbsp; &nbsp;
+		<button onclick="plusSlides(1)">Next</button>
+		
+	</div>
+
+
+	<script type="text/javascript">
+		var index = 1;
+		showSlides(index);
+
+		function plusSlides(n) {
+			showSlides(index += n);
+		}
+		
+
+		function showSlides(n) {
+			var i=0;
+			var slides = document.getElementsByClassName('mySlide');
+			if (n>slides.length) 
+			{
+				index = 1;
+			}
+			if (n<1) 
+			{
+				index = slides.length;
+			}
+
+			for (i=0;i<slides.length;i++) {
+				slides[i].style.display="none";
+			}
+			slides[index-1].style.display = "block";
+		}
+	</script>
+
+</body>
+</html>

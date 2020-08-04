@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Validation</title>
+</head>
+<body>
+
+<div>
+	<form name="" onsubmit="handleOnSubmit(event)">
+		<div>
+			<label>Full Name</label>
+			<input type="text" id="fullname" name="">
+		</div><hr>
+		<div>
+			<label>Age: </label>
+			<input type="number" name="age" id="age">
+		</div><hr>
+		<div>
+			<label>Gender:</label>
+			<input type="radio" id="female" name="gender" value="Female" checked>Female
+			<input type="radio" id="male" name="gender" value="Male">Male
+		</div><hr>
+		<div>
+			<label>Interest</label>
+			<input type="checkbox" id="Python" name="interest" value="Python">Python
+			<input type="checkbox" id="php" name="interest" value="PHP">PHP
+			<input type="checkbox" id="javascript" name="interest" value="JavaScript">JavaScript
+		</div><hr>
+		<div>
+			<label>Education: </label>
+			<select id="education">
+				<option value="10">10</option>
+				<option value="12">12</option>
+				<option value="BE">B.E.</option>
+				<option value="Masters">Masters</option>
+			</select>
+		</div><hr>
+		<input type="submit" name="submit" value="Submit">
+	</form>
+
+</div>
+<script type="text/javascript">
+	
+function handleOnSubmit(event) {
+	event.preventDefault();
+	var fullname = document.getElementById('fullname').value;
+	var age = document.getElementById('age').value;
+	var genderElements = document.getElementsByName('gender');
+	for (var i=0; genderElements[i]; i++) {
+		if (genderElements[i].checked) {
+			var gender = genderElements[i].value;
+		}
+	}
+
+	var intrest = document.getElementsByName('interest');
+	var intrests = [];
+	for (var i=0; intrest[i]; i++) {
+		if (intrest[i].checked) {
+			intrests.push(intrest[i].value);
+		}
+		
+	}
+
+	var education = document.getElementById('education');
+	for (var i=0; education[i]; i++) {
+		if (education[i].selected) {
+			var educationLevel=education[i].value;
+		}
+		
+	}
+
+
+	var userDetailsObject = {
+		fullname,
+		age,
+		gender,
+		intrests ,
+		educationLevel
+	}
+	console.log(userDetailsObject);
+	console.log(userDetailsObject.educationLevel);
+}
+
+
+</script>
+</body>
+</html>

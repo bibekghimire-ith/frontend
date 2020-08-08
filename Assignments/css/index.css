@@ -1,0 +1,314 @@
+body {
+	background-image: linear-gradient(-90deg, red, yellow);
+	width: 100%;
+	height: 700px;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+	
+}
+.navbar {
+	margin-top: 50px;
+
+}
+#navbar ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#navbar	li {
+	width: 17%;
+	padding: 1%;
+	margin-right: 7px;
+	display: block;
+	float: left;
+	background: #aff;
+}
+#navbar li:nth-child(5) {
+	margin-right: 0;
+	//float: right;
+}
+nav li a {
+
+}
+.icon {
+	display: none;
+	text-decoration: none;
+	font-size: 24px;
+
+}
+#navbar::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+.main-img {
+	margin-top: 20px;
+}
+.main-img::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.main-img img {
+	width: 60%;
+	height: 470px;
+	margin: 0;
+	padding: 0;
+	float: left;
+}
+
+.price {
+	background: #1ff;
+	width: 35%;
+	height: 230px;
+	margin-right: 3%;
+	float: right;
+	text-align: center;
+	position: relative;
+
+	line-height: 230px;
+
+		
+}
+.price div {
+	//justify-content: center;
+	//vertical-align: middle;
+	//line-height: 230px;
+	//top: 36%;
+	//left: 40%;
+	// position: absolute;
+	//width: 30%;
+	//height: 100px;
+	//margin: auto;
+
+	line-height: 1.5;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+
+.features {
+	width: 100%;
+	margin-top: 20px;
+
+}
+.features::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.feature {
+	background: #fff;
+	width: 20%;
+	text-align: center;
+	float: left;
+	padding: 1%;
+	font-weight: bold;
+}
+
+.feature:nth-child(2) {
+	margin-right: 3%;
+}
+.feature:nth-child(3) {
+	margin-right: 3%;
+}
+.feature:nth-child(1) {
+	margin-right: 3%;
+}
+
+
+.featured-item {
+	width: 97%;
+	background: #fff;
+	margin-top: 30px;
+}
+.featured-item::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.featured-item img {
+	width: 30%;
+	// background: #fff;
+	float: left;
+}
+.featured-item div {
+	width: 70%;
+	// background: #fff;
+	float: left;
+	padding-top: 50px;
+	font-weight: bold;
+}
+.featured-item button {
+	height: 50px;
+	background: orange;
+	margin-bottom: 10px;
+}
+
+.heading {
+	width: 97%;
+	margin: 10px 0;
+	text-align: center;
+}
+.heading::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.text {
+	width: 30%;
+	//display: block;
+	font-size: 1.2em;
+	font-weight: bold;
+	float: left;
+}
+span.increasing {
+	width: 33%;
+	height: 12px;
+	display: block;
+	margin-top: 8px;
+	float: left;
+	background-image: linear-gradient(-90deg, red, yellow);
+}
+span.decreasing {
+	width: 33%;
+	height: 12px;
+	display: block;
+	
+	margin-top: 8px;
+	float: left;
+	background-image: linear-gradient(-90deg, red, yellow);
+}
+
+
+.gallery {
+	width: 97%;
+	margin: 30px 0;
+}
+.gallery img {
+	width: 18%;
+	display: block;
+	margin-right: 2.5%;
+	float: left;
+	margin-bottom: 20px;
+
+}
+.gallery img:nth-child(5) {
+	margin-right: 0;
+}
+.gallery img:nth-child(10) {
+	margin-right: 0;
+}
+
+
+
+#hello {
+	width: 70%; height: 100px; background: #fff; display: none;
+}
+
+
+
+@media screen and (max-width: 900px) and (min-width: 600px){
+  .main-img {
+  	width: 97%;
+  }
+  .main-img img {
+  	width: 100%;
+  }
+  .price {
+  	width: 47%;
+  	float: left;
+  	margin: 10px auto;
+  	
+  }
+  .price-left {
+  	margin-right: 6%;
+  }
+  nav {
+  	display: none;
+  }
+  .icon {
+  	display: block;
+  	top: 0;
+  	left: 0;
+  }
+  .feature {
+  	width: 45%;
+  	margin: 10px auto;
+  }
+  .featured-item {
+
+  }
+  .gallery img{
+  	width: 45%;
+  	display: inline-block;
+  	margin: 10px auto;
+  	
+  }
+  .gallery img:nth-child(odd) {
+		margin-right: 10%;
+	}
+  .gallery img:nth-child(even) {
+		margin-right: 0;
+	}
+
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .main-img {
+  	width: 100%;
+  }
+  .main-img img {
+  	width: 100%;
+  }
+  .price {
+  	width: 100%;
+  	margin: 10px auto;
+  }
+  #navbar {
+  	display: none;
+  }
+  .icon {
+  	display: block;
+  	font-size: 20px;
+  	top: 0;
+  	left: 0;
+  }
+  .feature {
+  	width: 100%;
+  	margin: 10px auto;
+  }
+  .featured-item {
+  	width: 100%;
+  }
+  .featured-item img {
+  	width: 100%;
+  }
+  .featured-item div {
+  	
+  	padding: 50px;
+  }
+  .gallery {
+  	width: 100%;
+  }
+  .gallery img{
+  	width: 100%;
+  	display: inline-block;
+  	margin: 10px auto;
+  	
+  }
+  
+  .gallery img:nth-child(10) {
+		margin-bottom: 50px;
+	}
+}
+
+
+

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Template Page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+
+<div class="navbar">
+	<a href="" class="icon" id="icon">
+    	<i class="fa fa-bars" style="color: brown; font-size: 24px;"></i>&nbsp;&nbsp;Menu
+  	</a>
+<!--  	<div id="hello" style=""></div>  -->
+<nav id="navbar">
+	<ul style="list-style: none;">
+		<li>TACOS</li>
+		<li>BEERS</li>
+		<li>WINES</li>
+		<li>DESSERTS</li>
+		<li>RESERVATIONS</li>
+
+	</ul>
+</nav>
+</div>	
+
+<!-- Main Image & Price -->
+<div class="main-img">
+	<DIV><img src="img1.jpg"></DIV>
+	<div class="price price-left" style="margin-bottom: 15px;">
+		
+		<div>
+			<p style="font-size: 32px;">$3.99</p>
+			<p style="font-size: 24px; font-weight: bold;">Kombucha</p>
+		</div>	
+	</div>
+	<div class="price">
+		<div>
+			<p style="font-size: 32px;">$3.99</p>
+			<p style="font-size: 24px; font-weight: bold;">Kombucha</p>
+		</div>	
+	</div>	
+
+</div>
+
+<!-- Features Section -->
+<div class="features">
+	<div class="feature">
+		<span style="font-size: 40px;">🌮</span>
+		<p>Tacos</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+	</div>
+
+	<div class="feature">
+		<span style="font-size: 40px;">🍺</span>
+		<p>Beer</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+	</div>
+
+	<div class="feature">
+		<span style="font-size: 40px;">🍷</span>
+		<p>Wine</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+	</div>
+
+	<div class="feature">
+		<span style="font-size: 40px;">🎵</span>
+		<p>Music</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+	</div>
+</div>
+
+
+<!-- Featured Item -->
+<div class="featured-item">
+	<img src="tacco.png">
+	<div>
+		<h2>Featured Tacco</h2>
+		<p>Slim Profile, easy to hold and loaded with cheese.</p>
+		<p>
+		This is the one you have been waiting for</p>
+		<button>Learn More --></button>
+	</div>
+</div>
+
+
+<div class="heading">
+	<span class="increasing"></span><span class="text">Instant Grams</span><span class="decreasing"></span>
+</div>
+<!-- Gallery Section -->
+<div class="gallery">
+	<img src="gallery1.jfif">
+	<img src="gallery2.jfif">
+	<img src="gallery3.jfif">
+	<img src="gallery4.jfif">
+	<img src="gallery5.jfif">
+	<img src="gallery6.jfif">
+	<img src="gallery7.jfif">
+	<img src="gallery8.jfif">
+	<img src="gallery9.jfif">
+	<img src="gallery10.jfif">
+</div>
+
+
+</div>
+
+<script type="text/javascript">
+
+document.getElementById('icon').onclick = function() {
+	var x = document.getElementById('navbar');
+ 	if (x.style.display === 'block') {
+    	x.style.display = 'none';
+  	} else {
+    	x.style.display = 'block';
+  	}
+}
+
+
+
+
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.style.display === 'block') {
+    x.style.display = 'none';
+  } else {
+    x.style.display = 'block';
+  }
+} 
+</script>
+
+
+</body>
+</html>

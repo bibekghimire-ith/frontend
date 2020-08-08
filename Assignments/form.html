@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Portfolio page</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="container">
+	
+<p class="header">Good Vibes Form</p>
+
+	<div class="form-box">
+		<p class="sub-header">Tell us something positive that happened to you today.</p>
+
+		<form onsubmit="handleForm(event);">
+			<div class="form-rows">
+				<div class="form-label"><label>Name </label></div>
+				
+				<div class="input-field"><input type="text" id="name" name=""></div>
+			</div>
+
+			<div class="form-rows">
+				<div class="form-label"><label>Email </label></div>
+				<div class="input-field"><input type="email" id="email" name=""></div>
+			</div>
+
+			<div class="form-rows">
+				<div class="form-label">
+					<label>On a scale of 1-10, how good was it? </label>
+				</div>	
+				<div class="input-field">
+					<input type="number" id="rating" name="">
+				</div>	
+			</div>
+
+			<div class="form-rows">
+				<div class="form-label">
+					<label>Where did it happen? </label>
+				</div>	
+				<div class="input-field">
+					<select id="place">
+						<option value="At Home">At Home</option> <br><br>
+						<option value="At Work">At Work</option> <br>
+						<option value="On the Street">On the Street</option> <br>
+						<option value="Others">Others</option> <br>
+					</select>
+				</div>	
+				
+				
+			</div>
+
+			<div class="form-rows">
+				<div class="form-label">
+					<label>At what time of day did it happen? </label>
+				</div>	
+				<div class="input-field form-radio">
+					<input type="radio" value="morning" name="time">Morning <br><br>
+					<input type="radio" value="afternoon" name="time">Afternoon <br><br>
+					<input type="radio" value="evening" name="time">Evening
+				</div>
+				
+				
+			</div>
+
+			<div class="form-rows">
+				<div class="form-label">
+					<label>What emotions did you experience?
+(Select all that apply) </label>
+				</div>	
+				<div class="input-field checkbox">
+					<input type="checkbox" value="excited" name="experience">Excited <br><br>
+					<input type="checkbox" value="humbled" name="experience">Humbled <br><br>
+					<input type="checkbox" value="elated" name="experience">Elated <br><br>
+					<input type="checkbox" value="loved" name="experience">Loved <br><br>
+					<input type="checkbox" value="enthusiastic" name="experience">Enthusiastic
+				</div>	
+				
+				
+			</div>
+
+			<div class="form-rows">
+				<div class="form-label">
+					<label>Please describe your positive experience. </label>
+					
+				</div>	
+				<div class="input-field">
+					<textarea id="exp-describe"></textarea>
+				</div>	
+				
+			</div>
+
+			<input type="submit" name="" value="Submit">
+
+		</form>
+
+	</div>
+
+
+
+</div>
+
+
+
+
+<script type="text/javascript">
+	
+function handleForm(event) {
+	event.preventDefault();
+	var name = document.getElementById('name').value;
+	var email = document.getElementById('email').value;
+	var rating = document.getElementById('rating').value;
+
+	var placeSel = document.getElementById('place');
+	for(var i=0; placeSel[i]; i++) {
+		if(placeSel[i].selected) {
+			var place = placeSel[i].value;
+		}
+	}
+
+
+	var time = document.getElementsByName('time');
+	for (var i=0; time[i]; i++) {
+		if(time[i].checked) {
+			var dayTime = time[i].value;
+		}
+	}
+
+
+
+	var experience = [];
+	var experiences = document.getElementsByName('experience');
+	for (var i=0; experiences[i]; i++) {
+		if(experiences[i].checked) {
+			experience.push(experiences[i].value);
+		}
+	}
+
+	var description = document.getElementById('exp-describe').value;
+
+console.log(name,email,rating,place,dayTime,experience, description);
+
+	var formDetails ={
+		name,
+		email,
+		rating,
+		place,
+		dayTime,
+		experience,
+		description
+	}
+	console.log(formDetails);
+
+}
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

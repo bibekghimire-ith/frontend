@@ -1,0 +1,72 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #69ccd1;
+}
+
+.header {
+	text-align: center;
+	font-weight: bold;
+	font-size: 48px;
+}
+.sub-header {
+	font-size: 24px;
+}
+.form-box {
+	width: 75%;
+	margin: 0 auto;
+	background: #eee;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	padding: 20px;
+	font-size: 16px;
+	text-align: center;
+}
+
+.form-rows {
+	padding: 15px;
+}
+.form-rows::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.form-label {
+	width: 45%;
+	float: left;
+	text-align: right;
+}
+.input-field {
+	width: 45%;
+	float: left;
+	text-align: left;
+	margin-left: 30px;
+
+}
+
+
+input {
+	border: 1px solid #fff;
+	border-radius: 7px;
+}
+
+textarea {
+	border: 1px solid #eee;
+	border-radius: 7px;
+}
+select {
+	width: 150px;
+ 	height: 30px;
+ 	border: 1px solid #eee;
+ 	border-radius: 7px;
+ }
+input[type="submit"] {
+	width: 120px;
+	height: 40px;
+	background: #83c7b3;
+	color: white;
+	font-size: 16px;
+}
+
+
+
